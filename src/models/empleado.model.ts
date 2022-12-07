@@ -1,4 +1,4 @@
-import {Entity, model, property, belongsTo, hasMany} from '@loopback/repository';
+import {belongsTo, Entity, hasMany, model, property} from '@loopback/repository';
 import {Cargo} from './cargo.model';
 import {Vacaciones} from './vacaciones.model';
 
@@ -26,7 +26,7 @@ export class Empleado extends Entity {
     type: 'boolean',
     default: true,
   })
-  estado?: boolean;
+  disponible?: boolean;
 
   @belongsTo(() => Cargo)
   cargoId: string;
